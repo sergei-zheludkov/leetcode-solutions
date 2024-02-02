@@ -1,3 +1,5 @@
+// link to problem: https://leetcode.com/problems/merge-sorted-array
+
 const test1_arr1 = [1,2,3,0,0,0];
 const test1_arr2 = [2,5,6];
 const test1_length1 = 3;

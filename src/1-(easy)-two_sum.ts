@@ -1,3 +1,5 @@
+// link to problem: https://leetcode.com/problems/two-sum
+
 const test1_arr = [2,7,11,15];
 const test1_target = 9;
 const test2_arr = [3,2,4];

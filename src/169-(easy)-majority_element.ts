@@ -1,3 +1,5 @@
+// link to problem: https://leetcode.com/problems/majority-element
+
 const test1_arr = [3,2,3];
 const test2_arr = [2,2,1,1,1,2,2];
 const test3_arr = [1];

@@ -1,3 +1,5 @@
+// link to problem: https://leetcode.com/problems/add-binary
+
 const test1_a = "11";
 const test1_b = "1";
 

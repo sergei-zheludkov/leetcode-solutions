@@ -1,18 +1,6 @@
 // link to problem: https://leetcode.com/problems/merge-two-sorted-lists
-
-
-/**
- * Definition for singly-linked list.
- *
- */
-class ListNode {
-   val: number
-   next: ListNode | null
-   constructor(val?: number, next?: ListNode | null) {
-       this.val = (val === undefined ? 0 : val)
-       this.next = (next === undefined ? null : next)
-   }
-}
+import { ListNode } from "./helpers/list-node";
+import { getArrayFromList } from "./helpers/get-array-from-list";
 
 const test1_list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
 const test1_list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
@@ -31,20 +19,6 @@ const test5_list2 = new ListNode(-10, new ListNode(-3, new ListNode(0, new ListN
 
 const test6_list1 = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(2, new ListNode(4)))));
 const test6_list2 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4)))));
-
-const getArrayFromList = (list1: ListNode | null, acc: number[] = []): number[] => {
-  if (!list1) {
-    return acc;
-  }
-
-  if (list1.next === null || list1.next === undefined) {
-    return [...acc, list1.val];
-  }
-
-  const newAcc = [...acc, list1.val];
-
-  return getArrayFromList(list1.next, newAcc)
-}
 
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   if (!list1) {

@@ -1,4 +1,4 @@
-// link: https://leetcode.com/problems/contains-duplicate
+// link to problem: https://leetcode.com/problems/contains-duplicate
 
 const test1_arr = [1,2,3,1];
 const test2_arr = [1,2,3,4];

@@ -23,3 +23,5 @@ function frequencySort(str: string): string {
 console.log(`test 1: \n Expected: eert \n Output: ${frequencySort(test1_str)}`);
 console.log(`test 2: \n Expected: aaaccc \n Output: ${frequencySort(test2_str)}`);
 console.log(`test 3: \n Expected: bbAa \n Output: ${frequencySort(test3_str)}`);
+
+export { frequencySort };

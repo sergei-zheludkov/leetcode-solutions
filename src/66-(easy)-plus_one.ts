@@ -30,6 +30,6 @@ function plusOne(digits: number[]): number[] {
 console.log(`test 1: \n Expected: [1,2,4] \n Output: ${plusOne(test1_arr)}`);
 console.log(`test 2: \n Expected: [4,3,2,1] \n Output: ${plusOne(test2_arr)}`);
 console.log(`test 3: \n Expected: [1,0,0,0] \n Output: ${plusOne(test3_arr)}`);
-console.log(`test 3: \n Expected: [9,0,0,0] \n Output: ${plusOne(test4_arr)}`);
+console.log(`test 4: \n Expected: [9,0,0,0] \n Output: ${plusOne(test4_arr)}`);
 
 export { plusOne };

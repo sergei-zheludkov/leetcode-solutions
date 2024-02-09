@@ -1,5 +1,5 @@
 // link to problem: https://leetcode.com/problems/linked-list-cycle
-import { ListNode } from "./helpers/list-node";
+import { ListNode } from "./models/list-node";
 
 function hasCycle(head: ListNode | null): boolean {
   const newCollection = new Set<ListNode>();

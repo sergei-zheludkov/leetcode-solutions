@@ -1,6 +1,6 @@
 // link to problem: https://leetcode.com/problems/remove-linked-list-elements
 
-import { ListNode } from "./helpers/list-node";
+import { ListNode } from "./models/list-node";
 import { getArrayFromList } from "./helpers/get-array-from-list";
 
 const test1_list = new ListNode(-15, new ListNode(2, new ListNode(-10, new ListNode(-7, new ListNode(-1, new ListNode(0, new ListNode(1, new ListNode(2, new ListNode(4)))))))));

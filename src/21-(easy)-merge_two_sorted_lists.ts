@@ -1,6 +1,6 @@
 // link to problem: https://leetcode.com/problems/merge-two-sorted-lists
 
-import { ListNode } from "./helpers/list-node";
+import { ListNode } from "./models/list-node";
 import { getArrayFromList } from "./helpers/get-array-from-list";
 
 const test1_list1 = new ListNode(1, new ListNode(2, new ListNode(4)));

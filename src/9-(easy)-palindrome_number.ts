@@ -20,5 +20,4 @@ console.log('test1: false =>', isPalindrome(104));
 console.log('test1: false =>', isPalindrome(-121));
 console.log('test1: false =>', isPalindrome(123));
 
-
 export { isPalindrome };

@@ -1,4 +1,4 @@
-import { ListNode } from "./list-node";
+import { ListNode } from "../models/list-node";
 
 export const getArrayFromList = (list1: ListNode | null, acc: number[] = []): number[] => {
   if (!list1) {

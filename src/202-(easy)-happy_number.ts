@@ -17,9 +17,10 @@ function isHappy(n: number): boolean {
 
   let sum = n.toString();
 
+  // eslint-disable-next-line no-constant-condition
   while (true) {
     const newSum = sum.split('')
-      .reduce((sum, num) => Number(num) ** 2 + sum, 0);
+      .reduce((acc, num) => Number(num) ** 2 + acc, 0);
 
     if (newSum === 1) {
       return true;

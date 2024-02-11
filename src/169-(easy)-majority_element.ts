@@ -17,7 +17,7 @@ function majorityElement(nums: number[]): number {
   }, {} as Record<string, number>);
 
   const max = Math.max(...Object.values(obj));
-  const key = Object.keys(obj).find(key => obj[key] === max);
+  const key = Object.keys(obj).find(str => obj[str] === max);
 
   return Number(key);
 }

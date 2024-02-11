@@ -11,7 +11,7 @@ function inorderTraversal(root: TreeNode | null): number[] {
     return [];
   }
 
-  return [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right),]
+  return [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)]
 }
 
 console.log(`test 1: \n Expected: 1,3,2 \n Output: ${inorderTraversal(test1_tree)}`);

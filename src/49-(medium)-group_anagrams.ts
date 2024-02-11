@@ -15,9 +15,10 @@ function groupAnagrams(strArr: string[]): string[][] {
     const str = strArr[step];
     const key = str.split('').sort().join('');
 
-    if (collection.has(key)) {
-      // @ts-ignore
-      collection.set(key, [...collection.get(key), str]);
+    const itemArr = collection.get(key);
+
+    if (itemArr) {
+      collection.set(key, [...itemArr, str]);
     } else {
       collection.set(key, [str]);
     }

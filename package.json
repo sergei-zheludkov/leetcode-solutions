@@ -5,10 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "npm run lint --fix",
+    "test": "echo \"No test specified\""
   },
   "dependencies": { "parcel-bundler": "^1.6.1" },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.10",
     "typescript": "4.4.4"
   },
   "resolutions": {
@@ -16,5 +26,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn typecheck && yarn lint",
+      "pre-push": "yarn test"
+    }
+  }
 }

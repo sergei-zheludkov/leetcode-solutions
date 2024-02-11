@@ -1,7 +1,7 @@
 // link to problem: https://leetcode.com/problems/linked-list-cycle
 import { ListNode } from "./models/list-node";
 
-function hasCycle(head: ListNode | null): boolean {
+function hasCycle(list: ListNode | null): boolean {
   const newCollection = new Set<ListNode>();
 
   const recursionCheck = (head: ListNode | null): boolean => {
@@ -18,7 +18,7 @@ function hasCycle(head: ListNode | null): boolean {
     return recursionCheck(head.next);
   }
 
-  return recursionCheck(head);
+  return recursionCheck(list);
 }
 
 

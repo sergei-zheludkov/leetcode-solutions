@@ -36,5 +36,4 @@ console.log(`test 2: \n a: ${test2_a} \n b: ${test2_b} \n Expected: 10101 \n Out
 console.log(`test 3: \n Expected: 110111101100010011000101110110100000011101000101011001000011011000001100011110011010010011000000000 \n Output: ${addBinary(test3_a, test3_b)}`);
 console.log(`test 4: \n a: ${test4_a} \n b: ${test4_b} \n Expected: 10111010 \n Output: ${addBinary(test4_a, test4_b)}`);
 
-
 export { addBinary };

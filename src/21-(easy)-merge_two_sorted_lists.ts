@@ -46,5 +46,4 @@ console.log('test 4: [0] =>', mergeTwoLists(test4_list1, test4_list2));
 console.log('test 5: null =>', mergeTwoLists(test5_list1, test5_list2));
 console.log(`test 6: \n List1: ${getArrayFromList(test6_list1)} \n List2: ${getArrayFromList(test6_list2)} \n Expected: 1,1,2,2,2,2,3,4,4,4 \n Output: ${getArrayFromList(mergeTwoLists(test6_list1, test6_list2))}`, );
 
-
 export { mergeTwoLists };

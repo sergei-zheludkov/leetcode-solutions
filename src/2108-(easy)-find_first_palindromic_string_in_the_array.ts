@@ -1,20 +1,22 @@
 // link to problem: https://leetcode.com/problems/find-first-palindromic-string-in-the-array
 
+import { checkPalindrome } from "./helpers/check-palindrome";
+
 const test1_words = ["abc","car","ada","racecar","cool"];
 const test2_words = ["notapalindrome","racecar"];
 const test3_words = ["def","ghi"];
 
 function firstPalindrome(words: string[]): string {
   for (const word of words) {
-    const reversed = word.split('').reverse().join('');
-
-    if (reversed === word) {
+    if (checkPalindrome(word)) {
       return word;
     }
   }
 
   return "";
 }
+
+// PREV SOLUTION
 
 // function firstPalindrome(words: string[]): string {
 //   for (const word of words) {

@@ -1,5 +1,7 @@
 // link to problem: https://leetcode.com/problems/palindromic-substrings
 
+import { checkPalindrome } from "./helpers/check-palindrome";
+
 const test1_str = "abc";
 const test2_str = "aaa";
 const test3_str = "aabc";
@@ -14,9 +16,9 @@ function countSubstrings(str: string): number {
 
   for (let ind = 0; ind < str.length; ind++) {
     for (let offset = 1; ind + offset <= str.length; offset++) {
-      const checkStr = str.substring(ind,  ind + offset);
+      const partForCheck = str.substring(ind,  ind + offset);
 
-      if (checkStr === checkStr.split('').reverse().join('')) {
+      if (checkPalindrome(partForCheck)) {
         count += 1;
       }
     }

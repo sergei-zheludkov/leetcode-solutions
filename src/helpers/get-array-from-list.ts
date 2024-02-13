@@ -12,4 +12,4 @@ export const getArrayFromList = (list1: ListNode | null, acc: number[] = []): nu
   const newAcc = [...acc, list1.val];
 
   return getArrayFromList(list1.next, newAcc)
-}
+};

@@ -21,3 +21,5 @@ function deleteNode(node: ListNode | null): void {
 deleteNode(test1_node);
 
 console.log(`test 1: \n List: 1,2,3,4,5 \n Expected: 1,2,4,5 \n Output: ${getArrayFromList(test1_list)}`);
+
+export { deleteNode };

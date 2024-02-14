@@ -1,4 +1,5 @@
 // link to problem: https://leetcode.com/problems/linked-list-cycle
+
 import { ListNode } from "./models/list-node";
 
 function hasCycle(list: ListNode | null): boolean {

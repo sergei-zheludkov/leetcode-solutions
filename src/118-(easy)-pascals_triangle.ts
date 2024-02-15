@@ -1,5 +1,7 @@
 // link to problem: https://leetcode.com/problems/pascals-triangle
 
+import { getRow } from "./119-(easy)-pascals_triangle_II";
+
 const test1_num_rows = 15;
 const test2_num_rows = 1;
 
@@ -8,28 +10,33 @@ function generate(numRows: number): number[][] {
     return [[1]];
   }
 
-  if (numRows === 2) {
-    return [[1],[1,1]];
-  }
-
-  const rows = generate(numRows - 1);
-  const lastRow = rows[rows.length - 1];
-  const newRow: number[] = [1];
-
-  for (let index = 0; index < rows.length; index++) {
-    const current = lastRow[index];
-    const next = lastRow[index + 1] ?? 0;
-    const result = current + next;
-
-    newRow.push(result);
-  }
-
-  rows.push(newRow);
-
-  return rows;
+  return [...generate(numRows - 1), getRow(numRows - 1)];
 }
 
 // Previous solution
+
+// function generate(numRows: number): number[][] {
+//   const newRow: number[] = [1];
+//
+//   if (numRows === 1) {
+//     return [newRow];
+//   }
+//
+//   const rows = generate(numRows - 1);
+//   const lastRow = rows[rows.length - 1];
+//
+//   for (let index = 0; index < rows.length; index++) {
+//     const current = lastRow[index];
+//     const next = lastRow[index + 1] ?? 0;
+//     const result = current + next;
+//
+//     newRow.push(result);
+//   }
+//
+//   rows.push(newRow);
+//
+//   return rows;
+// }
 
 // function generate(numRows: number): number[][] {
 //   if (numRows === 1) {

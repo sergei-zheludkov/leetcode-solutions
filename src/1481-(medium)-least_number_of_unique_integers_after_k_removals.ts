@@ -1,6 +1,5 @@
 // link to problem: https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals
 
-
 const test1_args: [number[], number] = [[5, 5, 4], 1];
 const test2_args: [number[], number] = [[4, 3, 1, 1, 3, 3, 2], 3];
 const test3_args: [number[], number] = [[5,5,4,5,1,2,2,3,3,4,6,1,9], 3];
@@ -18,9 +17,9 @@ const findLeastNumOfUniqueInts = (arr: number[], k: number): number => {
   const countedResult = Array.from(collection.values()).sort((countA, countB) => countB - countA);
 
   while (k) {
-    const count = countedResult[countedResult.length - 1]
+    const count = countedResult[countedResult.length - 1];
 
-    if (count && k >= count) {
+    if (k >= count) {
       k -= count;
       countedResult.pop();
     } else {

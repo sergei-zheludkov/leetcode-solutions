@@ -1,0 +1,1 @@
+<a href="https://codeclimate.com/github/sergei-zheludkov/leetcode-solutions/maintainability"><img src="https://api.codeclimate.com/v1/badges/f5c4ca5b73f7665fbb28/maintainability" /></a> <a href="https://codeclimate.com/github/sergei-zheludkov/leetcode-solutions/test_coverage"><img src="https://api.codeclimate.com/v1/badges/f5c4ca5b73f7665fbb28/test_coverage" /></a>

@@ -1,4 +1,4 @@
-import { ListNode } from "../models/list-node";
+import { ListNode } from '../models/list-node';
 
 export const getListLength = (head: ListNode | null): number => {
   if (!head) {

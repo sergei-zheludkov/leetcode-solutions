@@ -1,4 +1,4 @@
-import { TreeNode } from "../models/tree-node";
+import { TreeNode } from '../models/tree-node';
 
 export const diameterOfBinaryTree = (root: TreeNode | null): number => {
   let max = 0;

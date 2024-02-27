@@ -1,4 +1,4 @@
-import { ListNode } from "../models/list-node";
+import { ListNode } from '../models/list-node';
 
 export const getArrayFromList = (list1: ListNode | null, acc: number[] = []): number[] => {
   if (!list1) {
@@ -11,5 +11,5 @@ export const getArrayFromList = (list1: ListNode | null, acc: number[] = []): nu
 
   const newAcc = [...acc, list1.val];
 
-  return getArrayFromList(list1.next, newAcc)
+  return getArrayFromList(list1.next, newAcc);
 };

@@ -1,0 +1,30 @@
+name: pull-request
+on:
+  pull_request:
+    branches: [ "master" ]
+jobs:
+  install:
+    name: "Install, checks and tests"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.9.0
+
+      - name: "install"
+        run: yarn
+
+      - name: "type check"
+        run: yarn typecheck
+
+      - name: "eslint"
+        run: yarn lint
+
+      - name: "test & publish code coverage"
+        uses: paambaati/codeclimate-action@v2.4.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: yarn test --coverage
+          debug: true

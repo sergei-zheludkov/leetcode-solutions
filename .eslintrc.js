@@ -24,12 +24,14 @@ module.exports = {
     camelcase: 0,
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
     'no-shadow': 0,
     'no-useless-constructor': 0,
     '@typescript-eslint/no-shadow': 2,
     '@typescript-eslint/member-delimiter-style': 2,
     'import/prefer-default-export': 0,
-    'import/extensions': 0
+    'import/extensions': 0,
+    'object-curly-spacing': ['error', 'always'],
   },
   settings: {
     'import/resolver': { node: { extensions: ['.js', '.ts'] } },
@@ -39,6 +41,6 @@ module.exports = {
     'node_modules',
     'build',
     'dist',
-    'src/draft.ts'
+    'src/draft.ts',
   ],
 };

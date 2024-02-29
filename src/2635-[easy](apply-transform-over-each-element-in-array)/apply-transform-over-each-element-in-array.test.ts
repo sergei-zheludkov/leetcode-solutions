@@ -15,7 +15,7 @@ test.each([
     array: [10, 20, 30],
     callback: () =>  42,
     result: [42, 42, 42],
-  }
+  },
 ])('apply transform over each element in array', ({ array, callback, result }) => {
   expect(map(array, callback)).toEqual(result);
 });

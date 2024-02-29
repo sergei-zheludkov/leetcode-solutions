@@ -1,6 +1,6 @@
 import { createCounter } from './counter';
 
-describe(('counter'), () => {
+describe('counter', () => {
   test('first case', () => {
     const counter = createCounter(10);
 

@@ -1,5 +1,1 @@
-export const containsDuplicate = (nums: number[]): boolean => {
-  const collection = new Set(nums);
-
-  return collection.size !== nums.length;
-};
+export const containsDuplicate = (nums: number[]): boolean => new Set(nums).size !== nums.length;

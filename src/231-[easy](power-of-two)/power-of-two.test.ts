@@ -1,19 +1,11 @@
 import { isPowerOfTwo } from './power-of-two';
 
 describe('power of two', () => {
-  test('truthy cases', () => {
-    expect(isPowerOfTwo(1)).toBeTruthy();
-    expect(isPowerOfTwo(16)).toBeTruthy();
-    expect(isPowerOfTwo(64)).toBeTruthy();
-    expect(isPowerOfTwo(256)).toBeTruthy();
-    expect(isPowerOfTwo(1024)).toBeTruthy();
+  test.each([1,16,64,256,1024])('truthy cases', (num) => {
+    expect(isPowerOfTwo(num)).toBeTruthy();
   });
 
-  test('falsy cases', () => {
-    expect(isPowerOfTwo(3)).toBeFalsy();
-    expect(isPowerOfTwo(55)).toBeFalsy();
-    expect(isPowerOfTwo(77)).toBeFalsy();
-    expect(isPowerOfTwo(100)).toBeFalsy();
-    expect(isPowerOfTwo(1000)).toBeFalsy();
+  test.each([3,55,77,100,1000])('falsy cases', (num) => {
+    expect(isPowerOfTwo(num)).toBeFalsy();
   });
 });

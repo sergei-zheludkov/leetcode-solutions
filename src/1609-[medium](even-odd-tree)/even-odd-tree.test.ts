@@ -56,8 +56,7 @@ describe('even odd tree', () => {
     expect(isEvenOddTree(test1_tree)).toBeTruthy();
   });
 
-  test('falsy cases', () => {
-    expect(isEvenOddTree(test2_tree)).toBeFalsy();
-    expect(isEvenOddTree(test3_tree)).toBeFalsy();
+  test.each([test2_tree, test3_tree])('falsy cases', (tree) => {
+    expect(isEvenOddTree(tree)).toBeFalsy();
   });
 });

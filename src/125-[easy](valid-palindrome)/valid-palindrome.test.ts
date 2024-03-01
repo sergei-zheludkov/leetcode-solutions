@@ -1,16 +1,11 @@
 import { isPalindrome } from './valid-palindrome';
 
 describe(('valid palindrome'), () => {
-  test('truthy cases', () => {
-    expect(isPalindrome('')).toBeTruthy();
-    expect(isPalindrome(' ')).toBeTruthy();
-    expect(isPalindrome('a')).toBeTruthy();
-    expect(isPalindrome('A man, a plan, a canal: Panama')).toBeTruthy();
+  test.each(['', ' ' ,'a', 'A man, a plan, a canal: Panama'])('truthy cases', (str) => {
+    expect(isPalindrome(str)).toBeTruthy();
   });
 
-  test('falsy cases', () => {
-    expect(isPalindrome('race a car')).toBeFalsy();
-    expect(isPalindrome('0P')).toBeFalsy();
-    expect(isPalindrome('0O')).toBeFalsy();
+  test.each(['race a car', '0P', '0O'])('falsy cases', (str) => {
+    expect(isPalindrome(str)).toBeFalsy();
   });
 });

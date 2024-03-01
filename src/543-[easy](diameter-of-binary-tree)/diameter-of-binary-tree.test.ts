@@ -12,18 +12,23 @@ const test9_tree = new TreeNode(1);
 const test10_tree = new TreeNode(1, new TreeNode(2));
 
 describe(('diameter of binary tree'), () => {
-  test('has width', () => {
-    expect(diameterOfBinaryTree(test1_tree)).toBe(3);
-    expect(diameterOfBinaryTree(test3_tree)).toBe(4);
-    expect(diameterOfBinaryTree(test4_tree)).toBe(5);
-    expect(diameterOfBinaryTree(test5_tree)).toBe(5);
-    expect(diameterOfBinaryTree(test6_tree)).toBe(5);
-    expect(diameterOfBinaryTree(test7_tree)).toBe(6);
-    expect(diameterOfBinaryTree(test8_tree)).toBe(6);
+  test.each([
+    { tree: test1_tree, expected: 3 },
+    { tree: test3_tree, expected: 4 },
+    { tree: test4_tree, expected: 5 },
+    { tree: test5_tree, expected: 5 },
+    { tree: test6_tree, expected: 5 },
+    { tree: test7_tree, expected: 6 },
+    { tree: test8_tree, expected: 6 },
+
+  ])('has width', ({ tree, expected }) => {
+    expect(diameterOfBinaryTree(tree)).toBe(expected);
   });
 
-  test('thin cases', () => {
-    expect(diameterOfBinaryTree(test9_tree)).toBe(0);
-    expect(diameterOfBinaryTree(test10_tree)).toBe(1);
+  test.each([
+    { tree: test9_tree, expected: 0 },
+    { tree: test10_tree, expected: 1 },
+  ])('thin cases', ({ tree, expected }) => {
+    expect(diameterOfBinaryTree(tree)).toBe(expected);
   });
 });

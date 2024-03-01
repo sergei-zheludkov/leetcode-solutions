@@ -9,12 +9,14 @@ const test5_tree = new TreeNode(1, new TreeNode(2, null, new TreeNode(3 )),  new
 const test6_tree = new TreeNode(0, new TreeNode(0, null, new TreeNode(0 )),  new TreeNode(0, null, new TreeNode(0 )));
 const test7_tree = new TreeNode(1, new TreeNode(2, new TreeNode(3, new TreeNode(5)), new TreeNode(4)),  new TreeNode(2, new TreeNode(4), new TreeNode(3)));
 
-test('maximum depth of binary tree', () => {
-  expect(maxDepth(test1_tree)).toBe(1);
-  expect(maxDepth(test2_tree)).toBe(1);
-  expect(maxDepth(test3_tree)).toBe(2);
-  expect(maxDepth(test4_tree)).toBe(3);
-  expect(maxDepth(test5_tree)).toBe(3);
-  expect(maxDepth(test6_tree)).toBe(3);
-  expect(maxDepth(test7_tree)).toBe(4);
+test.each([
+  { tree: test1_tree, expected: 1 },
+  { tree: test2_tree, expected: 1 },
+  { tree: test3_tree, expected: 2 },
+  { tree: test4_tree, expected: 3 },
+  { tree: test5_tree, expected: 3 },
+  { tree: test6_tree, expected: 3 },
+  { tree: test7_tree, expected: 4 },
+])('maximum depth of binary tree', ({ tree, expected }) => {
+  expect(maxDepth(tree)).toBe(expected);
 });

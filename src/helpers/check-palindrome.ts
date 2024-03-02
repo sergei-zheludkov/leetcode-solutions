@@ -1,11 +1,14 @@
 export const checkPalindrome = (str: string): boolean => {
-  for (let step = 0; step < (str.length - 1) / 2; step++) {
-    const first = str[step];
-    const last = str[str.length - 1 - step];
+  for (let i = 0, j = str.length - 1; i < j; ) {
+    const first = str[i];
+    const last = str[j];
 
     if (first !== last) {
       return false;
     }
+
+    i++;
+    j--;
   }
 
   return true;

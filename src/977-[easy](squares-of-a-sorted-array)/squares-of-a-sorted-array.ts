@@ -2,21 +2,19 @@ export const sortedSquares = (nums: number[]): number[] => {
   const collection: number[] = [];
 
   for (let i = 0, j = nums.length - 1; i <= j; ) {
-    const first = nums[i] ** 2;
-    const last = nums[j] ** 2;
+    const left = Math.abs(nums[i]);
+    const right = Math.abs(nums[j]);
 
-    collection.push(first);
-
-    if (i === j) {
-      i++;
-      continue;
+    if (right > left) {
+      collection.push(right ** 2);
+      j--;
     }
 
-    collection.push(last);
-
-    i++;
-    j--;
+    if (left >= right) {
+      collection.push(left ** 2);
+      i++;
+    }
   }
 
-  return collection.sort((a,b) => a - b);
+  return collection.reverse();
 };

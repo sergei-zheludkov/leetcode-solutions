@@ -1,16 +1,14 @@
-import { ListNode } from '../models/list-node';
 import { hasCycle } from './linked-list-cycle';
+import { createLinkedList } from '../helpers/create-linked-list';
 
-const test1_list = new ListNode(1, new ListNode(4, new ListNode(5)));
-const test2_list = new ListNode(1, new ListNode(3, new ListNode(4)));
-const test3_list = new ListNode(2, new ListNode(6));
+const list1 = createLinkedList([1,4,5]);
+const list2 = createLinkedList([1,3,4]);
+const list3 = createLinkedList([2]);
 
 describe('linked list cycle', () => {
   // test('truthy cases', () => {});
 
-  test('falsy cases', () => {
-    expect(hasCycle(test1_list)).toBeFalsy();
-    expect(hasCycle(test2_list)).toBeFalsy();
-    expect(hasCycle(test3_list)).toBeFalsy();
+  test.each([list1, list2, list3])('falsy cases', (list) => {
+    expect(hasCycle(list)).toBeFalsy();
   });
 });

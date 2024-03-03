@@ -1,15 +1,22 @@
-import { ListNode } from '../models/list-node';
 import { getArrayFromList } from '../helpers/get-array-from-list';
+import { createLinkedList } from '../helpers/create-linked-list';
 import { removeElements } from './remove-linked-list-elements';
 
-const test1_list = new ListNode(1);
-const test2_list = new ListNode(1, new ListNode(2));
-const test3_list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6))))));
-const test4_list = new ListNode(-15, new ListNode(2, new ListNode(-10, new ListNode(-7, new ListNode(-1, new ListNode(0, new ListNode(1, new ListNode(2, new ListNode(4)))))))));
+const list1 = createLinkedList([1]);
+const list2 = createLinkedList([1,2]);
+const list3 = createLinkedList([1,2,3,4,5,6]);
+const list4 = createLinkedList([-15,2,-10,-7,-1,0,1,2,4]);
 
 test('remove linked list elements', () => {
-  expect(removeElements(test1_list, 1)).toBeNull();
-  expect(getArrayFromList(removeElements(test2_list, 2))).toEqual([1]);
-  expect(getArrayFromList(removeElements(test3_list, 6))).toEqual([1,2,3,4,5]);
-  expect(getArrayFromList(removeElements(test4_list, 2))).toEqual([-15,-10,-7,-1,0,1,4]);
+  const result1 = removeElements(list1, 1);
+  expect(result1).toBeNull();
+
+  const result2 = removeElements(list2, 2);
+  expect(getArrayFromList(result2)).toEqual([1]);
+
+  const result3 = removeElements(list3, 6);
+  expect(getArrayFromList(result3)).toEqual([1,2,3,4,5]);
+
+  const result4 = removeElements(list4, 2);
+  expect(getArrayFromList(result4)).toEqual([-15,-10,-7,-1,0,1,4]);
 });

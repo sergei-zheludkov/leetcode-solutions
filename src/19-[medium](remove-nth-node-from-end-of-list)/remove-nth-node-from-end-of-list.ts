@@ -1,16 +1,39 @@
 import { ListNode } from '../models/list-node';
-import { getListLength } from '../helpers/get-list-length';
 
 export const removeNthFromEnd = (head: ListNode | null, removeElemNum: number): ListNode | null => {
-  if (!head) {
-    return head;
+  const dummy = new ListNode(0, head);
+  let p1: ListNode | null = dummy;
+  let p2: ListNode | null = head;
+
+  while (removeElemNum > 0 && p2) {
+    p2 = p2.next;
+    removeElemNum--;
   }
 
-  if (getListLength(head) === removeElemNum) {
-    return head.next;
+  while (p2) {
+    p1 = p1?.next ?? null;
+    p2 = p2.next;
   }
 
-  head.next = removeNthFromEnd(head.next, removeElemNum);
+  if (p1) {
+    p1.next = p1.next?.next ?? null;
+  }
 
-  return head;
+  return dummy.next ?? null;
 };
+
+// PREV SOLUTION
+
+// export const removeNthFromEnd = (head: ListNode | null, removeElemNum: number): ListNode | null => {
+//   if (!head) {
+//     return head;
+//   }
+//
+//   if (getListLength(head) === removeElemNum) {
+//     return head.next;
+//   }
+//
+//   head.next = removeNthFromEnd(head.next, removeElemNum);
+//
+//   return head;
+// };

@@ -11,8 +11,8 @@ test.each([
   { array: [2,5,9], expected: [45,18,10] },
   { array: [5,7,10], expected: [70,50,35] },
   { array: [1,2,3,4], expected: [24,12,8,6] },
-  { array: [-1,1,0,-3,3], expected: [-0,0,9,-0,0] },
   { array: [10,20,30], expected: [600,300,200] },
+  { array: [-1,1,0,-3,3], expected: [-0,0,9,-0,0] },
 ])('product of array except self', ({ array, expected })  => {
   expect(productExceptSelf(array)).toEqual(expected);
 });

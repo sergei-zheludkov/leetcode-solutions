@@ -3,21 +3,24 @@ import { longestPalindrome } from './longest-palindromic-substring';
 const long_str = '0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000';
 
 describe('longest palindromic substring', () => {
-  test('one found case', () => {
-    expect(longestPalindrome('abc')).toBe('a');
-    expect(longestPalindrome('aaa')).toBe('aaa');
-    expect(longestPalindrome('aabc')).toBe('aa');
-    expect(longestPalindrome('aabccdaaa')).toBe('aaa');
-    expect(longestPalindrome('abaaba')).toBe('abaaba');
-    expect(longestPalindrome('abanmaba')).toBe('aba');
-    expect(longestPalindrome('aacabdkacaa')).toBe('aca');
-    expect(longestPalindrome(long_str)).toBe(long_str);
+  test.each([
+    { str: 'abc', expected: 'a' },
+    { str: 'aaa', expected: 'aaa' },
+    { str: 'aabc', expected: 'aa' },
+    { str: 'aabccdaaa', expected: 'aaa' },
+    { str: 'abaaba', expected: 'abaaba' },
+    { str: 'abanmaba', expected: 'aba' },
+    { str: 'aacabdkacaa', expected: 'aca' },
+    { str: long_str, expected: long_str },
+  ])('one found case', ({ str, expected }) => {
+    expect(longestPalindrome(str)).toBe(expected);
   });
-  test('some found cases', () => {
-    expect(longestPalindrome('aabccd')).toMatch(/aa|cc/);
-    expect(longestPalindrome('aabccdaa')).toMatch(/aa|cc/);
-    expect(longestPalindrome('babad')).toMatch(/bab|aba/);
-
+  test.each([
+    { str: 'aabccd', expected: /aa|cc/ },
+    { str: 'aabccdaa', expected: /aa|cc/ },
+    { str: 'babad', expected: /bab|aba/ },
+  ])('some found cases', ({ str, expected }) => {
+    expect(longestPalindrome(str)).toMatch(expected);
   });
 });
 

@@ -1,15 +1,26 @@
-import { ListNode } from '../models/list-node';
-import { getArrayFromList } from '../helpers/get-array-from-list';
 import { reverseList } from './reverse-linked-list';
+import { createLinkedList } from '../helpers/create-linked-list';
 
-const test1_list = new ListNode(1);
-const test2_list = new ListNode(1, new ListNode(2));
-const test3_list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6))))));
-const test4_list = new ListNode(-15, new ListNode(2, new ListNode(-10, new ListNode(-7, new ListNode(-1, new ListNode(0, new ListNode(1, new ListNode(2, new ListNode(4)))))))));
+test.each([
+  {
+    nodes: [1],
+    expected: [1],
+  },
+  {
+    nodes: [1,2],
+    expected: [2,1],
+  },
+  {
+    nodes: [1,2,3,4,5,6],
+    expected: [6,5,4,3,2,1],
+  },
+  {
+    nodes: [-15,2,-10,-7,-1,0,1,2,4],
+    expected: [4,2,1,0,-1,-7,-10,2,-15],
+  },
+])('reverse linked list', ({ nodes, expected }) => {
+  const list = createLinkedList(nodes);
+  const result = createLinkedList(expected);
 
-test('reverse linked list', () => {
-  expect(getArrayFromList(reverseList(test1_list))).toEqual([1]);
-  expect(getArrayFromList(reverseList(test2_list))).toEqual([2,1]);
-  expect(getArrayFromList(reverseList(test3_list))).toEqual([6,5,4,3,2,1]);
-  expect(getArrayFromList(reverseList(test4_list))).toEqual([4,2,1,0,-1,-7,-10,2,-15]);
+  expect(reverseList(list)).toEqual(result);
 });

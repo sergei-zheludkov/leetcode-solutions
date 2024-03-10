@@ -1,7 +1,5 @@
 import { ListNode } from '../models/list-node';
 import { getListLength } from '../helpers/get-list-length';
-// import { createLinkedList } from "../helpers/create-linked-list";
-// import { getArrayFromList } from "../helpers/get-array-from-list";
 
 export const rotateRight = (head: ListNode | null, k: number): ListNode | null => {
   if (!head || !head.next || !k) {

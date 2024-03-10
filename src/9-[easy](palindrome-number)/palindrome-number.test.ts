@@ -1,18 +1,11 @@
 import { isPalindrome } from './palindrome-number';
 
 describe('palindrome number', () => {
-  test('true cases', () => {
-    expect(isPalindrome(0)).toBeTruthy();
-    expect(isPalindrome(121)).toBeTruthy();
-    expect(isPalindrome(11)).toBeTruthy();
-    expect(isPalindrome(1221)).toBeTruthy();
+  test.each([0, 121, 11, 1221])('true cases', (num) => {
+    expect(isPalindrome(num)).toBeTruthy();
   });
-  test('false cases', () => {
-    expect(isPalindrome(-123)).toBeFalsy();
-    expect(isPalindrome(10)).toBeFalsy();
-    expect(isPalindrome(104)).toBeFalsy();
-    expect(isPalindrome(-121)).toBeFalsy();
-    expect(isPalindrome(123)).toBeFalsy();
+  test.each([-123, 10, 104, -121, 123])('false cases', (num) => {
+    expect(isPalindrome(num)).toBeFalsy();
   });
 });
 

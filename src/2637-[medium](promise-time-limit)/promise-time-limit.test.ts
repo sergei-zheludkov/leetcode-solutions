@@ -38,7 +38,7 @@ describe('timeout cancellation', () => {
       const x = a as number;
       const y = b as number;
 
-      await new Promise(res => setTimeout(res, 120));
+      await new Promise(res => setTimeout(res, 115));
       return x + y;
     };
 
@@ -63,7 +63,7 @@ describe('timeout cancellation', () => {
     }
 
     expect(result.resolved).toBe( 15);
-    expect(result.time).toBeGreaterThanOrEqual( 120);
+    expect(result.time).toBeGreaterThanOrEqual( 115);
   });
 
   test('error case', async () => {

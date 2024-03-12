@@ -1,9 +1,8 @@
 export const checkPalindrome = (str: string): boolean => {
-  for (let i = 0, j = str.length - 1; i < j; ) {
-    const first = str[i];
-    const last = str[j];
+  let i = 0, j = str.length - 1;
 
-    if (first !== last) {
+  while (i < j) {
+    if (str[i] !== str[j]) {
       return false;
     }
 

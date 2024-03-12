@@ -1,8 +1,24 @@
 import { ListNode } from '../models/list-node';
-import { getArrayFromList } from '../helpers/get-array-from-list';
 
 export const isPalindrome = (head: ListNode | null): boolean => {
-  const values = getArrayFromList(head);
+  const values: number[] = [];
 
-  return values.toString() === values.reverse().toString();
+  while (head) {
+    values.push(head.val);
+
+    head = head.next;
+  }
+
+  let i = 0, j = values.length - 1;
+
+  while (i < j) {
+    if (values[i] !== values[j]) {
+      return false;
+    }
+
+    i++;
+    j--;
+  }
+
+  return true;
 };

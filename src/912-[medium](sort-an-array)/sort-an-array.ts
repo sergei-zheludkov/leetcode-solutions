@@ -1,34 +1,31 @@
-const heapify = (arr: number[], n: number, i: number) => {
+const heapify = (arr: number[], len: number, i: number) => {
   let largest = i;
-  const left = 2 * i + 1;
-  const right = 2 * i + 2;
+  const left = i * 2 + 1;
+  const right = left + 1;
 
-  if (left < n && arr[left] > arr[largest]) {
+  if (left < len && arr[left] > arr[largest]) {
     largest = left;
   }
-  if (right < n && arr[right] > arr[largest]) {
+  if (right < len && arr[right] > arr[largest]) {
     largest = right;
   }
 
-  if (largest != i) {
-    const tmp = arr[i];
-    arr[i] = arr[largest];
-    arr[largest] = tmp;
+  if (largest !== i) {
+    [arr[i], arr[largest]] = [arr[largest], arr[i]];
 
-    heapify(arr, n, largest);
+    heapify(arr, len, largest);
   }
 };
 
 export const sortArray = (nums: number[]): number[] => {
-  const n = nums.length;
+  const length = nums.length;
 
-  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
-    heapify(nums, n, i);
+  for (let i = Math.floor(length / 2) - 1; i >= 0; i--) {
+    heapify(nums, length, i);
   }
-  for (let i = n - 1; i > 0; i--) {
-    const tmp = nums[0];
-    nums[0] = nums[i];
-    nums[i] = tmp;
+
+  for (let i = length - 1; i >= 0; i--) {
+    [nums[0], nums[i]] = [nums[i], nums[0]];
 
     heapify(nums, i, 0);
   }

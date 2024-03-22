@@ -1,7 +1,7 @@
 type MultiDimensionalArray = (number | MultiDimensionalArray)[];
 
-export const flat = (arr:  MultiDimensionalArray, n: number): MultiDimensionalArray => {
-  return arr.reduce<MultiDimensionalArray>((acc, elem) => {
+export const flat = (arr:  MultiDimensionalArray, n: number): MultiDimensionalArray => arr
+  .reduce<MultiDimensionalArray>((acc, elem) => {
     if (Array.isArray(elem) && n) {
       acc.push(...flat(elem, n - 1));
     } else {
@@ -9,7 +9,6 @@ export const flat = (arr:  MultiDimensionalArray, n: number): MultiDimensionalAr
     }
     return acc;
   }, []);
-};
 
 // export const flat = (arr:  MultiDimensionalArray, n: number): MultiDimensionalArray => {
 //   return arr.reduce<MultiDimensionalArray>((acc, elem) => {

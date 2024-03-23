@@ -1,10 +1,12 @@
 import { convertToTitle } from './excel-sheet-column-title';
 
-test('excel sheet column title', () => {
-  expect(convertToTitle(1)).toBe('A');
-  expect(convertToTitle(28)).toBe('AB');
-  expect(convertToTitle(701)).toBe('ZY');
-  expect(convertToTitle(10002)).toBe('NTR');
-  expect(convertToTitle(100020)).toBe('EQXX');
-  expect(convertToTitle(123820)).toBe('GADH');
+test.each([
+  { num: 1, expected: 'A' },
+  { num: 28, expected: 'AB' },
+  { num: 701, expected: 'ZY' },
+  { num: 10002, expected: 'NTR' },
+  { num: 100020, expected: 'EQXX' },
+  { num: 123820, expected: 'GADH' },
+])('excel sheet column title', ({ num, expected }) => {
+  expect(convertToTitle(num)).toBe(expected);
 });

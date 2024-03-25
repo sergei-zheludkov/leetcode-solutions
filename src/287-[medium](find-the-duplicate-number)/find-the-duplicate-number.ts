@@ -1,22 +1,49 @@
 export const findDuplicate = (nums: number[]): number | void => {
-  const collection: number[] = [];
+  let slow = 0, fast = 0;
 
-  let i = 0, j = nums.length - 1;
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    slow = nums[slow];
+    fast = nums[nums[fast]];
 
-  while (i <= j) {
-    if (collection[nums[i]]) {
-      return nums[i];
-    } else  {
-      collection[nums[i]] = nums[i];
+    if (slow === fast) {
+      break;
     }
+  }
 
-    if (collection[nums[j]]) {
-      return nums[j];
-    } else  {
-      collection[nums[j]] = nums[j];
+  let slow2 = 0;
+
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    slow = nums[slow];
+    slow2 = nums[slow2];
+
+    if (slow === slow2) {
+      return slow;
     }
-
-    i++;
-    j++;
   }
 };
+
+
+// export const findDuplicate = (nums: number[]): number | void => {
+//   const collection: number[] = [];
+//
+//   let i = 0, j = nums.length - 1;
+//
+//   while (i <= j) {
+//     if (collection[nums[i]]) {
+//       return nums[i];
+//     } else  {
+//       collection[nums[i]] = nums[i];
+//     }
+//
+//     if (collection[nums[j]]) {
+//       return nums[j];
+//     } else  {
+//       collection[nums[j]] = nums[j];
+//     }
+//
+//     i++;
+//     j++;
+//   }
+// };

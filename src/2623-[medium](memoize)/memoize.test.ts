@@ -1,6 +1,6 @@
+import { fib } from '../509-[easy](fibonacci-number)/fibonacci-number';
+import { sum } from '../2235-[easy](add-two-integers)/add-two-integers';
 import { factorial } from '../helpers/factorial';
-import { sum } from '../helpers/sum';
-import { fib } from '../helpers/fib';
 import { memoize } from './memoize';
 
 describe('memoize', () => {
@@ -54,7 +54,7 @@ describe('memoize', () => {
       return fib(n);
     });
 
-    expect(memoizedFn(5)).toBe(8);
+    expect(memoizedFn(10)).toBe(55);
     expect(callCount).toBe(1);
   });
 });

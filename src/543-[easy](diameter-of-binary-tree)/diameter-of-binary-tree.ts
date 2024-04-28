@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const diameterOfBinaryTree = (root: TreeNode | null): number => {
+export const diameterOfBinaryTree = (root: BinaryTreeNode | null): number => {
   let max = 0;
 
-  const maxDepth = (node: TreeNode | null): number => {
+  const maxDepth = (node: BinaryTreeNode | null): number => {
     if (!node) {
       return 0;
     }

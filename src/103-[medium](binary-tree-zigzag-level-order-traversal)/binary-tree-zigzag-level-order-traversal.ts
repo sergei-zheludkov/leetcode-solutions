@@ -1,12 +1,12 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
 const isEven = (n: number) => n % 2 === 0;
 const isOdd = (n: number) => n % 2 === 1;
 
-export const zigzagLevelOrder = (root: TreeNode | null): number[][] => {
+export const zigzagLevelOrder = (root: BinaryTreeNode | null): number[][] => {
   const result: number[][] = [];
 
-  (function dfs (head: TreeNode | null, level = 0) {
+  (function dfs (head: BinaryTreeNode | null, level = 0) {
     if (!head) {
       return;
     }

@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const levelOrder = (root: TreeNode | null): number[][] => {
+export const levelOrder = (root: BinaryTreeNode | null): number[][] => {
   const result: number[][] = [];
 
-  const dfs = (head: TreeNode | null, i = 0) => {
+  const dfs = (head: BinaryTreeNode | null, i = 0) => {
     if (!head) {
       return [];
     }

@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const sumOfLeftLeaves = (root: TreeNode | null, isLeft?: boolean): number => {
+export const sumOfLeftLeaves = (root: BinaryTreeNode | null, isLeft?: boolean): number => {
   if (!root) {
     return 0;
   }

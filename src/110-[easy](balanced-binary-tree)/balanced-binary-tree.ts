@@ -1,7 +1,7 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { maxDepth } from '../104-[easy](maximum-depth-of-binary-tree)/maximum-depth-of-binary-tree';
 
-export const isBalanced = (root: TreeNode | null): boolean => {
+export const isBalanced = (root: BinaryTreeNode | null): boolean => {
   if (!root) {
     return true;
   }

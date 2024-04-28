@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const pathSum = (root: TreeNode | null, targetSum: number): number[][] => {
+export const pathSum = (root: BinaryTreeNode | null, targetSum: number): number[][] => {
   const result: number[][] = []; 
   
-  const dfs = (head: TreeNode | null, currentSum = targetSum, path: number[] = []) => {
+  const dfs = (head: BinaryTreeNode | null, currentSum = targetSum, path: number[] = []) => {
     if (!head) {
       return;
     }

@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
+export const hasPathSum = (root: BinaryTreeNode | null, targetSum: number): boolean => {
   if (!root) {
     return false;
   }

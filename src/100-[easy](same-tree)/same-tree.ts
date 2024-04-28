@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const isSameTree = (tree1: TreeNode | null, tree2: TreeNode | null): boolean => {
+export const isSameTree = (tree1: BinaryTreeNode | null, tree2: BinaryTreeNode | null): boolean => {
   if (tree1 === null && tree2 === null) {
     return true;
   }

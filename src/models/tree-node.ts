@@ -1,10 +1,8 @@
 export class TreeNode {
   val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-  constructor(val?: number | null, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = (!val ? 0 : val);
-    this.left = (!left ? null : left);
-    this.right = (!right ? null : right);
+  children: TreeNode[];
+  constructor(val?: number, ...children: Array<TreeNode>) {
+    this.val = (val === undefined ? 0 : val);
+    this.children = children;
   }
 }

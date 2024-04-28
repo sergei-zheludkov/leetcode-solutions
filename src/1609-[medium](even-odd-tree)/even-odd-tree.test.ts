@@ -1,53 +1,53 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { isEvenOddTree } from './even-odd-tree';
 
-const test1_tree = new TreeNode(
+const test1_tree = new BinaryTreeNode(
   1, 
-  new TreeNode(
+  new BinaryTreeNode(
     10,
-    new TreeNode(
+    new BinaryTreeNode(
       3,
-      new TreeNode(12),
-      new TreeNode(8),
+      new BinaryTreeNode(12),
+      new BinaryTreeNode(8),
     ),
   ),
-  new TreeNode(
+  new BinaryTreeNode(
     4,
-    new TreeNode(
+    new BinaryTreeNode(
       7,
-      new TreeNode(6),
+      new BinaryTreeNode(6),
     ),
-    new TreeNode(
+    new BinaryTreeNode(
       9,
       null,
-      new TreeNode(2),
+      new BinaryTreeNode(2),
     ),
   ),
 );
 
-const test2_tree = new TreeNode(
+const test2_tree = new BinaryTreeNode(
   5,
-  new TreeNode(
+  new BinaryTreeNode(
     4,
-    new TreeNode(3),
-    new TreeNode(3),
+    new BinaryTreeNode(3),
+    new BinaryTreeNode(3),
   ),
-  new TreeNode(
+  new BinaryTreeNode(
     2,
-    new TreeNode(7),
+    new BinaryTreeNode(7),
   ),
 );
 
-const test3_tree = new TreeNode(
+const test3_tree = new BinaryTreeNode(
   5,
-  new TreeNode(
+  new BinaryTreeNode(
     9,
-    new TreeNode(3),
-    new TreeNode(5),
+    new BinaryTreeNode(3),
+    new BinaryTreeNode(5),
   ),
-  new TreeNode(
+  new BinaryTreeNode(
     1,
-    new TreeNode(7),
+    new BinaryTreeNode(7),
   ),
 );
 

@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { rightSideView } from './binary-tree-right-side-view';
 
-const tree1 = new TreeNode(1, new TreeNode(2, null, new TreeNode(5)), new TreeNode(3, null, new TreeNode(4)));
-const tree2 = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
-const tree3 = new TreeNode(1, new TreeNode(2, new TreeNode(4, new TreeNode(6, null, new TreeNode(7))), new TreeNode(5)), new TreeNode(3));
+const tree1 = new BinaryTreeNode(1, new BinaryTreeNode(2, null, new BinaryTreeNode(5)), new BinaryTreeNode(3, null, new BinaryTreeNode(4)));
+const tree2 = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4), new BinaryTreeNode(5)), new BinaryTreeNode(3));
+const tree3 = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, new BinaryTreeNode(6, null, new BinaryTreeNode(7))), new BinaryTreeNode(5)), new BinaryTreeNode(3));
 
 test.each([
   { tree: null, expected: [] },

@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const countNodes = (root: TreeNode | null): number => {
+export const countNodes = (root: BinaryTreeNode | null): number => {
   if (!root) {
     return 0;
   }

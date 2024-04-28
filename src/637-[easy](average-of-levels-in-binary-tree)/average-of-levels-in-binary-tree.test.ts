@@ -1,8 +1,8 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { averageOfLevels } from './average-of-levels-in-binary-tree';
 
-const tree1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-const tree2 = new TreeNode(3, new TreeNode(9, new TreeNode(15, new TreeNode(53)), new TreeNode(7, null,  new TreeNode(5))), new TreeNode(20, new TreeNode(21,  new TreeNode(10)), new TreeNode(90, null,  new TreeNode(40))));
+const tree1 = new BinaryTreeNode(3, new BinaryTreeNode(9), new BinaryTreeNode(20, new BinaryTreeNode(15), new BinaryTreeNode(7)));
+const tree2 = new BinaryTreeNode(3, new BinaryTreeNode(9, new BinaryTreeNode(15, new BinaryTreeNode(53)), new BinaryTreeNode(7, null,  new BinaryTreeNode(5))), new BinaryTreeNode(20, new BinaryTreeNode(21,  new BinaryTreeNode(10)), new BinaryTreeNode(90, null,  new BinaryTreeNode(40))));
 
 test.each([
   { tree: tree1, expected: [3,14.5,11] },

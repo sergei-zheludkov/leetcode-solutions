@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const maxLevelSum = (root: TreeNode | null): number => {
+export const maxLevelSum = (root: BinaryTreeNode | null): number => {
   const values: number[] = [-Infinity];
 
-  const dfs = (head: TreeNode | null, lvl = 1) => {
+  const dfs = (head: BinaryTreeNode | null, lvl = 1) => {
     if (!head) {
       return;
     }

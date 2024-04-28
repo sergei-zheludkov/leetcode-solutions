@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const preorderTraversal = (root: TreeNode | null): number[] => {
+export const preorderTraversal = (root: BinaryTreeNode | null): number[] => {
   if (!root) {
     return [];
   }

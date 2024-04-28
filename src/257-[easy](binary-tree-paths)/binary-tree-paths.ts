@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const binaryTreePaths = (root: TreeNode | null): string[] => {
+export const binaryTreePaths = (root: BinaryTreeNode | null): string[] => {
   const paths: string[] = [];
 
-  const dfs = (head: TreeNode | null, path = '') => {
+  const dfs = (head: BinaryTreeNode | null, path = '') => {
     if (!head) {
       return;
     }

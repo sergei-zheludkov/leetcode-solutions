@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const rightSideView = (root: TreeNode | null): number[] => {
+export const rightSideView = (root: BinaryTreeNode | null): number[] => {
   const values: number[] = [];
 
-  const dfs = (head: TreeNode | null, lvl = 0) => {
+  const dfs = (head: BinaryTreeNode | null, lvl = 0) => {
     if (!head) {
       return;
     }

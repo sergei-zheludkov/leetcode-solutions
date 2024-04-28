@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const searchBST = (root: TreeNode | null, val: number): TreeNode | null => {
+export const searchBST = (root: BinaryTreeNode | null, val: number): BinaryTreeNode | null => {
   if (!root) {
     return null;
   }

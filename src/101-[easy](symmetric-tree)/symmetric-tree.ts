@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-const getBranchValues = (branch: TreeNode | null, direction: 'left' | 'right'): string => {
+const getBranchValues = (branch: BinaryTreeNode | null, direction: 'left' | 'right'): string => {
   if (!branch) {
     return 'null';
   }
@@ -16,7 +16,7 @@ const getBranchValues = (branch: TreeNode | null, direction: 'left' | 'right'): 
   return 'error';
 };
 
-export const isSymmetric = (root: TreeNode | null): boolean => {
+export const isSymmetric = (root: BinaryTreeNode | null): boolean => {
   if (!root) {
     return true;
   }

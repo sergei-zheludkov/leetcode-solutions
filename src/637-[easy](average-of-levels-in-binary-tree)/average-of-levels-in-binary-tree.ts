@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const averageOfLevels = (root: TreeNode | null): number[] => {
+export const averageOfLevels = (root: BinaryTreeNode | null): number[] => {
   const values: [number, number][] = []; // sum, count
 
-  const dfs = (head: TreeNode | null, lvl = 0) => {
+  const dfs = (head: BinaryTreeNode | null, lvl = 0) => {
     if (!head) {
       return;
     }

@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const postorderTraversal = (root: TreeNode | null): number[] => {
+export const postorderTraversal = (root: BinaryTreeNode | null): number[] => {
   if (!root) {
     return [];
   }

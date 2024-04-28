@@ -1,22 +1,22 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
 export const addOneRow = (
-  root: TreeNode | null,
+  root: BinaryTreeNode | null,
   val: number,
   depth: number,
-): TreeNode | null => {
+): BinaryTreeNode | null => {
   if (depth === 1) {
-    return new TreeNode(val, root);
+    return new BinaryTreeNode(val, root);
   }
 
-  const dfs = (head: TreeNode | null, lvl = 2) => {
+  const dfs = (head: BinaryTreeNode | null, lvl = 2) => {
     if (!head) {
       return;
     }
 
     if (depth === lvl) {
-      head.left = new TreeNode(val, head.left);
-      head.right = new TreeNode(val, null, head.right);
+      head.left = new BinaryTreeNode(val, head.left);
+      head.right = new BinaryTreeNode(val, null, head.right);
       return;
     }
 

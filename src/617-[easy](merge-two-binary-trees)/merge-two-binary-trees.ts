@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const mergeTrees = (root1: TreeNode | null, root2: TreeNode | null): TreeNode | null => {
+export const mergeTrees = (root1: BinaryTreeNode | null, root2: BinaryTreeNode | null): BinaryTreeNode | null => {
   if (!root1) {
     return root2;
   }

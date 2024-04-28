@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const sortedArrayToBST = (nums: number[]): TreeNode | null => {
+export const sortedArrayToBST = (nums: number[]): BinaryTreeNode | null => {
   if (!nums.length) {
     return null;
   }
@@ -9,5 +9,5 @@ export const sortedArrayToBST = (nums: number[]): TreeNode | null => {
   const left = nums.slice(0, middleIndex);
   const right = nums.slice(middleIndex + 1);
 
-  return new TreeNode(nums[middleIndex], sortedArrayToBST(left), sortedArrayToBST(right));
+  return new BinaryTreeNode(nums[middleIndex], sortedArrayToBST(left), sortedArrayToBST(right));
 };

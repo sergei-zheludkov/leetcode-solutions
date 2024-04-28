@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { createLinkedList } from '../helpers/create-linked-list';
 import { isSubPath } from './linked-list-in-binary-tree';
 
-const tree1 = new TreeNode(1, new TreeNode(4, null, new TreeNode(2, new TreeNode(1))), new TreeNode(4, new TreeNode(2, new TreeNode(6), new TreeNode(8, new TreeNode(1), new TreeNode(3)))));
-const tree2 = new TreeNode(1, null, new TreeNode(1, new TreeNode(10, new TreeNode(9)), new TreeNode(1)));
+const tree1 = new BinaryTreeNode(1, new BinaryTreeNode(4, null, new BinaryTreeNode(2, new BinaryTreeNode(1))), new BinaryTreeNode(4, new BinaryTreeNode(2, new BinaryTreeNode(6), new BinaryTreeNode(8, new BinaryTreeNode(1), new BinaryTreeNode(3)))));
+const tree2 = new BinaryTreeNode(1, null, new BinaryTreeNode(1, new BinaryTreeNode(10, new BinaryTreeNode(9)), new BinaryTreeNode(1)));
 
 describe('linked list in binary tree', () => {
   test.each([

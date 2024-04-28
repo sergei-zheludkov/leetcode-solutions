@@ -1,7 +1,7 @@
 import { ListNode } from '../models/list-node';
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-const dfs = (list: ListNode | null, tree: TreeNode | null): boolean => {
+const dfs = (list: ListNode | null, tree: BinaryTreeNode | null): boolean => {
   if (!list) {
     return true;
   }
@@ -17,7 +17,7 @@ const dfs = (list: ListNode | null, tree: TreeNode | null): boolean => {
   return dfs(list.next, tree.left) || dfs(list.next, tree.right);
 };
 
-export const isSubPath = (list: ListNode | null, tree: TreeNode | null): boolean => {
+export const isSubPath = (list: ListNode | null, tree: BinaryTreeNode | null): boolean => {
   if (!tree) {
     return false;
   }

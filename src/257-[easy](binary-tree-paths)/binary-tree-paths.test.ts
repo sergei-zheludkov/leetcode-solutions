@@ -1,10 +1,10 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { binaryTreePaths } from './binary-tree-paths';
 
-const tree1 = new TreeNode(1);
-const tree2 = new TreeNode(1, new TreeNode(2, new TreeNode(5)), new TreeNode(3));
-const tree3 = new TreeNode(1, new TreeNode(2, new TreeNode(4, new TreeNode(8), new TreeNode(9)), new TreeNode(5, new TreeNode(10), new TreeNode(11))), new TreeNode(3, new TreeNode(6, new TreeNode(12), new TreeNode(13)), new TreeNode(7, null, new TreeNode(14))));
-const tree4 = new TreeNode(1, new TreeNode(2, new TreeNode(4, null, new TreeNode(9, new TreeNode(12), new TreeNode(13)))), new TreeNode(3, new TreeNode(6, new TreeNode(10, null, new TreeNode(14)), new TreeNode(11))));
+const tree1 = new BinaryTreeNode(1);
+const tree2 = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(5)), new BinaryTreeNode(3));
+const tree3 = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, new BinaryTreeNode(8), new BinaryTreeNode(9)), new BinaryTreeNode(5, new BinaryTreeNode(10), new BinaryTreeNode(11))), new BinaryTreeNode(3, new BinaryTreeNode(6, new BinaryTreeNode(12), new BinaryTreeNode(13)), new BinaryTreeNode(7, null, new BinaryTreeNode(14))));
+const tree4 = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, new BinaryTreeNode(9, new BinaryTreeNode(12), new BinaryTreeNode(13)))), new BinaryTreeNode(3, new BinaryTreeNode(6, new BinaryTreeNode(10, null, new BinaryTreeNode(14)), new BinaryTreeNode(11))));
 
 test.each([
   { tree: tree1, expected: ['1'] },

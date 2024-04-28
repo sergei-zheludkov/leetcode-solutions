@@ -1,6 +1,6 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const findBottomLeftValue = (root: TreeNode | null): number => {
+export const findBottomLeftValue = (root: BinaryTreeNode | null): number => {
   if (!root) {
     return 0;
   }
@@ -8,7 +8,7 @@ export const findBottomLeftValue = (root: TreeNode | null): number => {
   let maxLvl = 0;
   let val = root.val;
 
-  const dfs = (tree: TreeNode | null, level: number): void => {
+  const dfs = (tree: BinaryTreeNode | null, level: number): void => {
     if (!tree) {
       return;
     }

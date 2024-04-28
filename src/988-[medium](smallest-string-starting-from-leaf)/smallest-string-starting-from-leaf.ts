@@ -1,11 +1,11 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
 const getLetter = (num: number) => String.fromCharCode(65 + num);
 
-export const smallestFromLeaf = (root: TreeNode | null): string => {
+export const smallestFromLeaf = (root: BinaryTreeNode | null): string => {
   let min = '';
 
-  const dfs = (head: TreeNode | null, str = '') => {
+  const dfs = (head: BinaryTreeNode | null, str = '') => {
     if (head && !head.left && !head.right) {
       const checked = `${getLetter(head.val)}${str}`;
 

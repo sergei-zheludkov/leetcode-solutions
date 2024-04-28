@@ -1,13 +1,13 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { maxDepth } from './maximum-depth-of-binary-tree';
 
-const test1_tree = new TreeNode();
-const test2_tree = new TreeNode(1);
-const test3_tree = new TreeNode(1, null, new TreeNode(2));
-const test4_tree = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-const test5_tree = new TreeNode(1, new TreeNode(2, null, new TreeNode(3 )),  new TreeNode(2, null, new TreeNode(3 )));
-const test6_tree = new TreeNode(0, new TreeNode(0, null, new TreeNode(0 )),  new TreeNode(0, null, new TreeNode(0 )));
-const test7_tree = new TreeNode(1, new TreeNode(2, new TreeNode(3, new TreeNode(5)), new TreeNode(4)),  new TreeNode(2, new TreeNode(4), new TreeNode(3)));
+const test1_tree = new BinaryTreeNode();
+const test2_tree = new BinaryTreeNode(1);
+const test3_tree = new BinaryTreeNode(1, null, new BinaryTreeNode(2));
+const test4_tree = new BinaryTreeNode(3, new BinaryTreeNode(9), new BinaryTreeNode(20, new BinaryTreeNode(15), new BinaryTreeNode(7)));
+const test5_tree = new BinaryTreeNode(1, new BinaryTreeNode(2, null, new BinaryTreeNode(3 )),  new BinaryTreeNode(2, null, new BinaryTreeNode(3 )));
+const test6_tree = new BinaryTreeNode(0, new BinaryTreeNode(0, null, new BinaryTreeNode(0 )),  new BinaryTreeNode(0, null, new BinaryTreeNode(0 )));
+const test7_tree = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(3, new BinaryTreeNode(5)), new BinaryTreeNode(4)),  new BinaryTreeNode(2, new BinaryTreeNode(4), new BinaryTreeNode(3)));
 
 test.each([
   { tree: test1_tree, expected: 1 },

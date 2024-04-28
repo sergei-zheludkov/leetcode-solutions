@@ -1,11 +1,11 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { findBottomLeftValue } from './find-bottom-left-tree-value';
 
-const test1_tree = new TreeNode(2, new TreeNode(1), new TreeNode(3)); // => 1;
-const test2_tree = new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4))); // => 4
-const test3_tree = new TreeNode(1, new TreeNode(2), new TreeNode(3, null, new TreeNode(5))); // => 5
-const test4_tree = new TreeNode(1, new TreeNode(2, new TreeNode(4)), new TreeNode(3, new TreeNode(5), new TreeNode(6, new TreeNode(7)))); // => 7;
-const test5_tree = new TreeNode(1, new TreeNode(2, new TreeNode(4)), new TreeNode(3, new TreeNode(5), new TreeNode(6))); // => 4;
+const test1_tree = new BinaryTreeNode(2, new BinaryTreeNode(1), new BinaryTreeNode(3)); // => 1;
+const test2_tree = new BinaryTreeNode(1, new BinaryTreeNode(2), new BinaryTreeNode(3, new BinaryTreeNode(4))); // => 4
+const test3_tree = new BinaryTreeNode(1, new BinaryTreeNode(2), new BinaryTreeNode(3, null, new BinaryTreeNode(5))); // => 5
+const test4_tree = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4)), new BinaryTreeNode(3, new BinaryTreeNode(5), new BinaryTreeNode(6, new BinaryTreeNode(7)))); // => 7;
+const test5_tree = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4)), new BinaryTreeNode(3, new BinaryTreeNode(5), new BinaryTreeNode(6))); // => 4;
 
 test('find bottom left tree value', () => {
   expect(findBottomLeftValue(test1_tree)).toBe(1);

@@ -1,17 +1,17 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 import { mergeTrees } from './merge-two-binary-trees';
 
-const test1_tree1 = new TreeNode(1);
-const test1_tree2 = new TreeNode(1);
-const test1_expected = new TreeNode(2);
+const test1_tree1 = new BinaryTreeNode(1);
+const test1_tree2 = new BinaryTreeNode(1);
+const test1_expected = new BinaryTreeNode(2);
 
-const test2_tree1 = new TreeNode(1);
-const test2_tree2 = new TreeNode(1, new TreeNode(2));
-const test2_expected = new TreeNode(2, new TreeNode(2));
+const test2_tree1 = new BinaryTreeNode(1);
+const test2_tree2 = new BinaryTreeNode(1, new BinaryTreeNode(2));
+const test2_expected = new BinaryTreeNode(2, new BinaryTreeNode(2));
 
-const test3_tree1 = new TreeNode(1, new TreeNode(3, new TreeNode(5)), new TreeNode(2));
-const test3_tree2 = new TreeNode(2, new TreeNode(1, null, new TreeNode(4)), new TreeNode(3, null, new TreeNode(7)));
-const test3_expected = new TreeNode(3, new TreeNode(4, new TreeNode(5), new TreeNode(4)), new TreeNode(5, null, new TreeNode(7)));
+const test3_tree1 = new BinaryTreeNode(1, new BinaryTreeNode(3, new BinaryTreeNode(5)), new BinaryTreeNode(2));
+const test3_tree2 = new BinaryTreeNode(2, new BinaryTreeNode(1, null, new BinaryTreeNode(4)), new BinaryTreeNode(3, null, new BinaryTreeNode(7)));
+const test3_expected = new BinaryTreeNode(3, new BinaryTreeNode(4, new BinaryTreeNode(5), new BinaryTreeNode(4)), new BinaryTreeNode(5, null, new BinaryTreeNode(7)));
 
 test.each([
   { tree1: null, tree2: null, expected: null },

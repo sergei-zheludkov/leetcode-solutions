@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const sumNumbers = (root: TreeNode | null): number => {
+export const sumNumbers = (root: BinaryTreeNode | null): number => {
   let sum = 0;
 
-  const dfs = (head: TreeNode | null, num = '') => {
+  const dfs = (head: BinaryTreeNode | null, num = '') => {
     if (head && !head.left && !head.right) {
       sum += Number(`${num}${head.val}`);
       return;

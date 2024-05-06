@@ -1,9 +1,9 @@
-import { TreeNode } from '../models/tree-node';
+import { BinaryTreeNode } from '../models/binary-tree-node';
 
-export const deepestLeavesSum = (root: TreeNode | null): number => {
+export const deepestLeavesSum = (root: BinaryTreeNode | null): number => {
   const nums: number[][] = [];
 
-  const dfs = (head: TreeNode | null, lvl = 0) => {
+  const dfs = (head: BinaryTreeNode | null, lvl = 0) => {
     if (!head) {
       return;
     }

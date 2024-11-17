@@ -1,4 +1,5 @@
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+import type { JSONValue } from '../types';
+
 type Obj = Record<string, JSONValue> | Array<JSONValue>;
 
 export const compactObject = (obj: Obj): Obj => {

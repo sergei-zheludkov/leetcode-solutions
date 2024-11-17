@@ -1,5 +1,6 @@
-type JSONValue = undefined | null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
-type ArrayType = { id: number } & Record<string, JSONValue>;
+import type { JSONValue } from '../types';
+
+export type ArrayType = { id: number } & Record<string, JSONValue>;
 
 export const join = (arr1: ArrayType[], arr2: ArrayType[]): ArrayType[] => {
   const collection = new Map<number, ArrayType>();

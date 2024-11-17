@@ -1,4 +1,5 @@
-export type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+import type { JSONValue } from '../types';
+
 export type Fn = (value: JSONValue) => number
 
 export const sortBy = (arr: JSONValue[], fn: Fn): JSONValue[] => arr

@@ -1,6 +1,5 @@
 import { cancellable } from './timeout-cancellation';
-
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+import type { JSONValue } from '../types';
 
 describe('timeout cancellation', () => {
   test('should return result', async () => {

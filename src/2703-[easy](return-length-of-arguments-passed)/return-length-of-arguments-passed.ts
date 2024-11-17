@@ -1,3 +1,3 @@
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+import type { JSONValue } from '../types';
 
 export const argumentsLength = (...args: JSONValue[]): number => args.length;

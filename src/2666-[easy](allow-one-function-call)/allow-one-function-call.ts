@@ -1,4 +1,5 @@
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+import type { JSONValue } from '../types';
+
 type OnceFn = (...args: JSONValue[]) => JSONValue | undefined
 
 // eslint-disable-next-line @typescript-eslint/ban-types

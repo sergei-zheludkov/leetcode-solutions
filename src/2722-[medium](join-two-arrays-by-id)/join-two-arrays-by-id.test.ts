@@ -1,6 +1,10 @@
-import { join } from './join-two-arrays-by-id';
+import { ArrayType, join } from './join-two-arrays-by-id';
 
-test.each([
+test.each<{
+  array1: ArrayType[];
+  array2: ArrayType[];
+  expected: ArrayType[];
+}>([
   {
     array1: [{ id: 1, x: 1 }, { id: 2, x: 9 }],
     array2: [{ id: 3, x: 5 }],

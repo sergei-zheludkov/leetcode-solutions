@@ -1,6 +1,5 @@
 import { cancellable } from './interval-cancellation';
-
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+import type { JSONValue } from '../types';
 
 test.each([
   { time: 0, index: 0 },

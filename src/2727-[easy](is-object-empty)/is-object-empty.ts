@@ -1,5 +1,6 @@
-type JSONValue = null | undefined | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
-type Obj = Record<string, JSONValue> | JSONValue[]
+import type { JSONValue } from '../types';
+
+export type Obj = Record<string, JSONValue> | JSONValue[]
 
 export const isEmpty = (obj: Obj): boolean => {
   if (Array.isArray(obj) && obj.length) {

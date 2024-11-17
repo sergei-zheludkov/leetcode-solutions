@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Fn, JSONValue, sortBy } from './sort-by';
+import type { JSONValue } from '../types';
+import { Fn, sortBy } from './sort-by';
+
 
 test.each<{
   array: JSONValue[];

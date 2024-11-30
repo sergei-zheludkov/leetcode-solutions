@@ -1,15 +1,29 @@
 import { ListNode } from '../models/list-node';
 
-export const getArrayFromList = (list1: ListNode | null, acc: number[] = []): number[] => {
-  if (!list1) {
-    return acc;
+export const getArrayFromList = (list: ListNode | null): number[] => {
+  const nodes: number[] = [];
+
+  while (list) {
+    nodes.push(list.val);
+
+    list = list.next;
   }
 
-  if (list1.next === null || list1.next === undefined) {
-    return [...acc, list1.val];
-  }
-
-  const newAcc = [...acc, list1.val];
-
-  return getArrayFromList(list1.next, newAcc);
+  return nodes;
 };
+
+// -- Recursion --
+
+// export const getArrayFromList = (list: ListNode | null, acc: number[] = []): number[] => {
+//   if (!list) {
+//     return acc;
+//   }
+//
+//   if (list.next === null || list.next === undefined) {
+//     return [...acc, list.val];
+//   }
+//
+//   const newAcc = [...acc, list.val];
+//
+//   return getArrayFromList(list.next, newAcc);
+// };

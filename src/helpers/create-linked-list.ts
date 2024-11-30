@@ -1,7 +1,7 @@
 import { ListNode } from '../models/list-node';
 
-export const createLinkedList = (nodes: Array<number>): ListNode | null => {
-  if (!nodes.length) {
+export const createLinkedList = (nodes: Array<number> | null): ListNode | null => {
+  if (!nodes || !nodes.length) {
     return null;
   }
 

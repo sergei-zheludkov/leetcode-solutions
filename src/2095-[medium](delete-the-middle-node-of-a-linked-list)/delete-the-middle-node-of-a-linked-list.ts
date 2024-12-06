@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const deleteMiddle = (head: ListNode | null): ListNode | null => {
   const dummy = new ListNode(0, head);

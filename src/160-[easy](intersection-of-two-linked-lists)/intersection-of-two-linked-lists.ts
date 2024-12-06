@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const getIntersectionNode = (headA: ListNode | null, headB: ListNode | null): ListNode | null => {
   let p1 = headA;

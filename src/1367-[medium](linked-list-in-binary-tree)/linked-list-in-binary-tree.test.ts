@@ -1,5 +1,5 @@
 import { BinaryTreeNode } from '../models/binary-tree-node';
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 import { isSubPath } from './linked-list-in-binary-tree';
 
 const tree1 = new BinaryTreeNode(1, new BinaryTreeNode(4, null, new BinaryTreeNode(2, new BinaryTreeNode(1))), new BinaryTreeNode(4, new BinaryTreeNode(2, new BinaryTreeNode(6), new BinaryTreeNode(8, new BinaryTreeNode(1), new BinaryTreeNode(3)))));
@@ -12,8 +12,8 @@ describe('linked list in binary tree', () => {
     { tree: tree1, nodes: [4,2,8] },
     { tree: tree2, nodes: [1,10] },
   ])('truthy cases', ({ tree, nodes }) => {
-    const list = createLinkedList(nodes);
-    
+    const list = createSinglyLinkedList(nodes);
+
     expect(isSubPath(list, tree)).toBeTruthy();
   });
 
@@ -21,8 +21,8 @@ describe('linked list in binary tree', () => {
     { tree: tree1, nodes: [4,2,9] },
     { tree: tree1, nodes: [1,4,2,6,8] },
   ])('falsy cases', ({ tree, nodes }) => {
-    const list = createLinkedList(nodes);
-    
+    const list = createSinglyLinkedList(nodes);
+
     expect(isSubPath(list, tree)).toBeFalsy();
   });
 });

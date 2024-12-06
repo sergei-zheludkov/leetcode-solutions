@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const swapNodes = (head: ListNode | null, k: number): ListNode | null => {
   let cur = head;

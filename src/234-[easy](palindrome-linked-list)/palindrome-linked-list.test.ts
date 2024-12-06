@@ -1,5 +1,5 @@
 import { isPalindrome } from './palindrome-linked-list';
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 
 describe('palindrome linked list', () => {
   test.each([
@@ -8,7 +8,7 @@ describe('palindrome linked list', () => {
     [1,2,2,1],
     [1,2,3,2,1],
     [1,2,3,3,2,1],
-  ].map(createLinkedList))('truthy cases', (list) => {
+  ].map(createSinglyLinkedList))('truthy cases', (list) => {
     expect(isPalindrome(list)).toBeTruthy();
   });
 
@@ -16,7 +16,7 @@ describe('palindrome linked list', () => {
     [1,2],
     [2,2,5],
     [1,2,3,4,5,6],
-  ].map(createLinkedList))('falsy cases', (list) => {
+  ].map(createSinglyLinkedList))('falsy cases', (list) => {
     expect(isPalindrome(list)).toBeFalsy();
   });
 });

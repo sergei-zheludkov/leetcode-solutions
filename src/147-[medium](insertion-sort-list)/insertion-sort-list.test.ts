@@ -1,4 +1,4 @@
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 import { insertionSortList } from './insertion-sort-list';
 
 test.each([
@@ -15,8 +15,8 @@ test.each([
     expected: [-10000, -1000, -100, -10, 0, 1, 10, 100, 1000],
   },
 ])('insertion sort list', ({ nodes, expected }) => {
-  const list = createLinkedList(nodes);
-  const result = createLinkedList(expected);
+  const list = createSinglyLinkedList(nodes);
+  const result = createSinglyLinkedList(expected);
 
   expect(insertionSortList(list)).toEqual(result);
 });

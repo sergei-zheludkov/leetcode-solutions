@@ -1,8 +1,8 @@
-import { getArrayFromList } from '../helpers/get-array-from-list';
-import { ListNode } from '../models/list-node';
+import { getArrayFromSinglyList } from '../helpers/get-array-from-singly-list';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const pairSum = (head: ListNode | null): number => {
-  const stack = getArrayFromList(head);
+  const stack = getArrayFromSinglyList(head);
 
   let max = -Infinity;
 

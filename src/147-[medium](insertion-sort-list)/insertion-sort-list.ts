@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 // import { getArrayFromList } from '../helpers/get-array-from-list';
 // import { createLinkedList } from '../helpers/create-linked-list';
 

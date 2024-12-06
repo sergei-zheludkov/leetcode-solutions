@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 import { getListLength } from '../helpers/get-list-length';
 
 const separateListByNodeNumber = (list: ListNode | null, num: number): ListNode | null => {

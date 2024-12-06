@@ -1,4 +1,4 @@
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 import { modifiedList } from './delete-nodes-from-linked-list-present-in-array';
 
 test.each([
@@ -7,5 +7,5 @@ test.each([
   { nodes: [1,2,3,4], nums: [5], expected: [1,2,3,4] },
   { nodes: [2,10,9], nums: [9,2,5], expected: [10] },
 ])('delete nodes from linked list present in array', ({ nodes, nums, expected }) => {
-  expect(modifiedList(nums, createLinkedList(nodes))).toEqual(createLinkedList(expected));
+  expect(modifiedList(nums, createSinglyLinkedList(nodes))).toEqual(createSinglyLinkedList(expected));
 });

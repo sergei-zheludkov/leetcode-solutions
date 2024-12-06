@@ -1,5 +1,5 @@
 import { reverseList } from './reverse-linked-list';
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 
 test.each([
   {
@@ -19,8 +19,8 @@ test.each([
     expected: [4,2,1,0,-1,-7,-10,2,-15],
   },
 ])('reverse linked list', ({ nodes, expected }) => {
-  const list = createLinkedList(nodes);
-  const result = createLinkedList(expected);
+  const list = createSinglyLinkedList(nodes);
+  const result = createSinglyLinkedList(expected);
 
   expect(reverseList(list)).toEqual(result);
 });

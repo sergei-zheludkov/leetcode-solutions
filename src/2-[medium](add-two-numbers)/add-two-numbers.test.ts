@@ -1,5 +1,5 @@
 import { addTwoNumbers } from './add-two-numbers';
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 
 test.each([
   { nodes1: [9], nodes2: [], expected: [9] },
@@ -10,9 +10,9 @@ test.each([
   { nodes1: [9,9,9,9,9,9,9], nodes2: [1], expected: [0,0,0,0,0,0,0,1] },
   { nodes1: [9,9,9,9,9,9,9], nodes2: [9,9,9,9], expected: [8,9,9,9,0,0,0,1] },
 ])('add two numbers', ({ nodes1, nodes2, expected }) => {
-  const first = createLinkedList(nodes1);
-  const second = createLinkedList(nodes2);
-  const result = createLinkedList(expected);
+  const first = createSinglyLinkedList(nodes1);
+  const second = createSinglyLinkedList(nodes2);
+  const result = createSinglyLinkedList(expected);
 
   expect(addTwoNumbers(first, second)).toEqual(result);
 });

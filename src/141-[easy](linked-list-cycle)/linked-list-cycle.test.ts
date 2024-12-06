@@ -1,5 +1,5 @@
 import { hasCycle } from './linked-list-cycle';
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 
 describe('linked list cycle', () => {
   // test('truthy cases', () => {});
@@ -9,7 +9,7 @@ describe('linked list cycle', () => {
     { nodes: [1,3,4] },
     { nodes: [2] },
   ])('falsy cases', ({ nodes }) => {
-    const list = createLinkedList(nodes);
+    const list = createSinglyLinkedList(nodes);
 
     expect(hasCycle(list)).toBeFalsy();
   });

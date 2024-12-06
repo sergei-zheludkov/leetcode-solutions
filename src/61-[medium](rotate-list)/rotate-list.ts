@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 import { getListLength } from '../helpers/get-list-length';
 
 export const rotateRight = (head: ListNode | null, k: number): ListNode | null => {

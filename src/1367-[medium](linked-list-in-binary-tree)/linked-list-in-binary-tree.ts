@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 import { BinaryTreeNode } from '../models/binary-tree-node';
 
 const dfs = (list: ListNode | null, tree: BinaryTreeNode | null): boolean => {

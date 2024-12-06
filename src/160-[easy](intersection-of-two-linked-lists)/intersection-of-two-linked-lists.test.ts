@@ -1,5 +1,5 @@
 import { getIntersectionNode } from './intersection-of-two-linked-lists';
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 const test1_intersect = new ListNode(8, new ListNode(4, new ListNode(5)));
 const test1_listA = new ListNode(4, new ListNode(1, test1_intersect));

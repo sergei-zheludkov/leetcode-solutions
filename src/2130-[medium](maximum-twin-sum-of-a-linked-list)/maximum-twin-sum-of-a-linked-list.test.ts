@@ -1,4 +1,4 @@
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 import { pairSum } from './maximum-twin-sum-of-a-linked-list';
 
 test.each([
@@ -7,7 +7,7 @@ test.each([
   { nodes: [4,2,2,3], expected: 7 },
   { nodes: [1,100_000,29,43,229,20], expected: 100_229 },
 ])('maximum twin sum of a linked list', ({ nodes, expected }) => {
-  const list = createLinkedList(nodes);
+  const list = createSinglyLinkedList(nodes);
 
   expect(pairSum(list)).toBe(expected);
 });

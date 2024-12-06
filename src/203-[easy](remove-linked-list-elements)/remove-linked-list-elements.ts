@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const removeElements = (head: ListNode | null, val: number): ListNode | null => {
   if (!head) {

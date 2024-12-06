@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const deleteDuplicates = (head: ListNode | null): ListNode | null => {
   if (!head) {

@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const reverseList = (head: ListNode | null): ListNode | null => {
   let prev: ListNode | null = null;

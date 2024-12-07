@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const removeNthFromEnd = (head: ListNode | null, removeElemNum: number): ListNode | null => {
   const dummy = new ListNode(0, head);

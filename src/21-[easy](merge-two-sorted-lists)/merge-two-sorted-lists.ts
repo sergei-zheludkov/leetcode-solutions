@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const mergeTwoLists = (list1: ListNode | null, list2: ListNode | null): ListNode | null => {
   if (!list1) {

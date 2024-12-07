@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const doubleIt = (head: ListNode | null): ListNode | null => {
   const stack: ListNode[] = [];

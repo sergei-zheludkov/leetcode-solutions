@@ -1,4 +1,4 @@
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 import { doubleIt } from './double-a-number-represented-as-a-linked-list';
 
 test.each([
@@ -6,5 +6,5 @@ test.each([
   { nodes: [1,8,9], expected: [3,7,8] },
   { nodes: [9,9,9], expected: [1,9,9,8] },
 ])('double a number represented as a linked list', ({ nodes, expected }) => {
-  expect(doubleIt(createLinkedList(nodes))).toEqual(createLinkedList(expected));
+  expect(doubleIt(createSinglyLinkedList(nodes))).toEqual(createSinglyLinkedList(expected));
 });

@@ -1,4 +1,4 @@
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList } from '../helpers/create-singly-linked-list';
 import { rotateRight } from './rotate-list';
 
 test.each([
@@ -33,7 +33,7 @@ test.each([
     expected: [2,3,1],
   },
 ])('rotate list', ({ nodes, k, expected }) => {
-  const list = createLinkedList(nodes);
+  const list = createSinglyLinkedList(nodes);
 
-  expect(rotateRight(list, k)).toEqual(createLinkedList(expected));
+  expect(rotateRight(list, k)).toEqual(createSinglyLinkedList(expected));
 });

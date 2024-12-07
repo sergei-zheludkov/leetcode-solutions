@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const reverseBetween = (head: ListNode | null, left: number, right: number, lvl = 1): ListNode | null => {
   if (!head) {

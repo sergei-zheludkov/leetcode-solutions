@@ -1,4 +1,4 @@
-import { createLinkedList } from '../helpers/create-linked-list';
+import { createSinglyLinkedList as createLinkedList } from '../helpers/create-singly-linked-list';
 import { oddEvenList } from './odd-even-linked-list';
 
 test.each([

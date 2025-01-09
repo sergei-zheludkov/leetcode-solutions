@@ -1,7 +1,9 @@
 import { firstPalindrome } from './find-first-palindromic-string-in-the-array';
 
-test('find first palindromic string in the array', () => {
-  expect(firstPalindrome(['abc','car','ada','racecar','cool'])).toBe('ada');
-  expect(firstPalindrome(['notapalindrome','racecar'])).toBe('racecar');
-  expect(firstPalindrome(['def','ghi'])).toBe('');
+test.each([
+  { words: ['abc','car','ada','racecar','cool'], expected: 'ada' },
+  { words: ['notapalindrome','racecar'], expected: 'racecar' },
+  { words: ['def','ghi'], expected: '' },
+])('find first palindromic string in the array', ({ words, expected }) => {
+  expect(firstPalindrome(words)).toBe(expected);
 });

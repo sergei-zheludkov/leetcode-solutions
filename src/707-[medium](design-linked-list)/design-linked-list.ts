@@ -1,5 +1,5 @@
-import { ListNode } from '../models/list-node';
-import { getArrayFromList } from '../helpers/get-array-from-list';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
+import { getArrayFromSinglyList as getArrayFromList } from '../helpers/get-array-from-singly-list';
 
 export class MyLinkedList {
   private head: ListNode | null = null;

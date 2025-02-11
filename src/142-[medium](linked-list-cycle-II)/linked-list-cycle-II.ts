@@ -1,4 +1,4 @@
-import { ListNode } from '../models/list-node';
+import { SinglyListNode as ListNode } from '../models/singly-list-node';
 
 export const detectCycle = (list: ListNode | null): ListNode | null => {
   const collection = new Set<ListNode>();
